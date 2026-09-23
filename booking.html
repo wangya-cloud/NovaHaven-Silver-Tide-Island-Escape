@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Booking details</title>
+
   <style>
     body {
       font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -45,14 +46,14 @@
       font-size: 16px;
     }
 
-    input,
-    select {
+    input {
       width: 100%;
       padding: 10px;
       margin-top: 6px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
+      box-sizing: border-box;
     }
 
     button {
@@ -80,20 +81,23 @@
     }
   </style>
 </head>
+
 <body>
+
   <div class="container">
+
     <h2>Booking details</h2>
 
     <div class="intro">
-      This page is part of a hypothetical travel booking scenario used for research purposes.
-      Please <strong>do not</strong> enter any real personal information. You may use
-      initials, a fictional phone number and a test email address. You are placing a
-      hypothetical booking for a <strong>Silver Tide Island Escape</strong>, similar to
-      purchasing a travel product on a website.
+      For this research task, please <strong>do not</strong> enter any real personal
+      information. Use fictional initials, a fictional phone number, and a test email
+      address. Please complete the booking for the
+      <strong>Silver Tide Island Escape</strong> using the fields below.
     </div>
 
     <form action="thanks.html" method="get">
-      <label for="name">Name (initials only)</label>
+
+      <label for="name">Name (fictional initials)</label>
       <input
         type="text"
         id="name"
@@ -102,7 +106,7 @@
         required
       />
 
-      <label for="phone">Contact number (fictional)</label>
+      <label for="phone">Phone number (fictional)</label>
       <input
         type="tel"
         id="phone"
@@ -117,24 +121,21 @@
         id="email"
         name="email"
         placeholder="e.g., test@example.com"
+        required
       />
 
-      <label for="travellers">Number of travellers</label>
-      <select id="travellers" name="travellers" required>
-        <option value="">Please select</option>
-        <option>1 traveler</option>
-        <option>2 travelers</option>
-        <option>3 travelers</option>
-        <option>4 or more travelers</option>
-      </select>
+      <button type="submit">
+        Submit booking
+      </button>
 
-      <button type="submit">Submit booking</button>
     </form>
 
     <div class="note">
-      This booking is for research purposes only. You will not actually be charged
-      or contacted outside of this survey.
+      This task is for research purposes only. No real transaction will be made,
+      and you will not be charged or contacted outside this survey.
     </div>
+
   </div>
+
 </body>
 </html>
